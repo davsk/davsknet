@@ -1,0 +1,32 @@
+# app.yaml
+
+application: davsknet
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /stylesheets
+  static_dir: static/stylesheets
+
+- url: /images
+  static_dir: static/images
+
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg)$
+
+- url: /(.*\.html)$
+  static_files: static/\1
+  upload: static/.*\.html$
+
+- url: /profile/.*
+  script: _go_app
+  login: required
+
+- url: /admin/.*
+  script: _go_app
+  login: admin
+
+- url: /.*
+  script: _go_app
