@@ -1,0 +1,116 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<link rel="import" href="/components/paper-button/paper-button.html">
+<link rel="import" href="/elements/david-address.html">
+
+<polymer-element name="davsknet-header" attributes="heading subheading" noscript>
+<template>
+	<style>
+		header { 
+			margin:0; 
+			padding:0; 
+			background-color: #9f9; 
+			position:relative; 
+			/*height:200px; */
+			width:100%;
+			overflow:auto;
+			border-bottom: 2px solid #0f0;
+		}
+
+
+		#wrapper {
+			margin: 0 14em 0 12em;
+			padding: 0 1em;
+			
+		}
+
+		#logo {
+			/*background-color: #ddd;*/
+			float: left;
+			width: 11em;
+			padding: 0 0.5em;
+			margin-left: -100%;
+			position: relative;
+			right: 13em;
+		}
+
+		#logo a {
+			padding-top: 3em
+		}
+
+		#nameplate {
+			float: left;
+			width: 100%;
+			/*background-color: #dff;*/
+			text-align: center;
+		}
+
+		#masthead {
+			float: left;
+			width: 13em;
+			padding: 0 0.5em;
+			/*background-color: #ff6;*/
+			margin-left: -14em;
+			position: relative;
+			left: 15em;
+		}
+
+		#masthead address {
+			padding-top: 0.5em
+		}
+
+		.tel {
+			padding-bottom: 0.75;
+			padding-top: 0.75;
+		}
+
+		paper-button {
+			margin: 3em;
+			width: 10em;
+		}
+
+		paper-button.colored {
+			color: #4285f4;
+			fill: #4285f4;
+		}
+
+		paper-button[raisedButton].colored {
+			background: #4285f4;
+			color: #fff;
+		}
+
+		paper-button[raisedButton].colored #ripple,
+		paper-button[raisedButton].colored::shadow #ripple {
+			color: #2a56c6;
+		}
+
+		paper-button[raisedButton].colored #focusBg,
+		paper-button[raisedButton].colored::shadow #focusBg {
+			background: #3367d6;
+		}
+
+	</style> 
+
+	<header>
+		<div id="wrapper">
+
+			<div id="nameplate">
+				<h1>{{heading}}</h1>
+				<h2>{{subheading}}</h2>
+			</div>
+
+			<div id ="masthead">
+				<!-- <david-address></david-address> -->
+					<address>
+						<span>David Skinner<br>670 S6th St Ste 16<br>Arkadelphia  <abbr title="Arkansas">AR</abbr>   71923-6242<br></span>
+						<span class="tel">text: <em>501-201-0414</em><br></span>
+						<span class="email"><a href="&#109;&#97;&#105;&#108;&#116;&#111;:&#100;&#97;&#118;&#105;&#100;&#64;&#100;&#97;&#118;&#115;&#107;&#46;&#110;&#101;&#116;">&#68;&#97;&#118;&#105;&#100; &#83;&#107;&#105;&#110;&#110;&#101;&#114;</a></span>
+					</address>
+				</div>	
+
+				<div id="logo">
+					<a href="http://www.davsk.net"><paper-button raisedButton class="colored" label="www.davsk.net" ></paper-button></a>
+				</div>
+			</div>
+		</header>
+	</template>
+</polymer-element>

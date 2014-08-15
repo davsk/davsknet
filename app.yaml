@@ -6,19 +6,22 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /stylesheets
-  static_dir: static/stylesheets
+- url: /favicon.ico
+  static_files: static/favicon.ico
+  upload: static/favicon.ico
 
 - url: /images
   static_dir: static/images
 
-- url: /(.*\.(gif|png|jpg))$
-  static_files: static/\1
-  upload: static/.*\.(gif|png|jpg)$
+- url: /components
+  static_dir: static/components
 
-- url: /(.*\.html)$
+- url: /elements
+  static_dir: static/elements
+
+- url: /(.*\.(gif|png|jpg|ico|html|css))$
   static_files: static/\1
-  upload: static/.*\.html$
+  upload: static/.*\.(gif|png|jpg|ico|html|css)$
 
 - url: /profile/.*
   script: _go_app
@@ -30,3 +33,12 @@ handlers:
 
 - url: /.*
   script: _go_app
+
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?\.md$
+- ^(.*/)?\.json$

@@ -2,9 +2,40 @@
 <html>
 <head>
 <title>Mandlebrot Viewer</title>
+<meta name="author" content="David Skinner" />
+<meta name="robots" content="INDEX, NOFOLLOW" />
+<script src="components/platform/platform.js"></script>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/gif" href="animated_favicon1.gif">
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script>
+<link rel="import" href="elements/davsknet-header.html">
+<style shim-shadowdom>
+    body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+      padding: 24px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;:width;
+    }
+
+    
+  </style>
+  <script>
   function initialize() {
     if (!window.google || !google.maps) {
       warnOffline();
@@ -19,14 +50,14 @@
         if (!nc) {
           return null;
         }
-        var url = '/tiles?z=' + zoom + '&x=' + nc.x + '&y=' + nc.y;
-        if ({{.InProd}}) {
+        var url = 'http://davsk.net/tiles?z=' + zoom + '&x=' + nc.x + '&y=' + nc.y;
+        //if ({{.InProd}}) {
           // Shard across multiple domains so that browsers that are limited in
           // the number of in-flight requests per domain will load more quickly.
           // Compute the shard deterministically to be cache-friendly.
-          var i = (nc.x + (2 * nc.y)) % 4;
-          url = 'http://' + i + '.' + document.location.host + url;
-        }
+        //  var i = (nc.x + (2 * nc.y)) % 4;
+        //  url = 'http://' + i + '.' + document.location.host + url;
+        //}
         return url;
       },
       tileSize: new google.maps.Size(256, 256),
@@ -115,8 +146,8 @@
   </style>
 </head>
 <body onload="initialize()">
+  <davsknet-header heading="DavskNet Mandelbrot Page" subheading="an appengine application"></davsknet-header>
   <div id="map_canvas" style="width: 640px; height: 480px;"></div>
-
   Powered by <a href="http://blog.golang.org/2011/05/go-and-google-app-engine.html">a horde of gophers</a>.
 
   <p id="stats" />

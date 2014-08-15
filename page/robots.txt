@@ -1,0 +1,14 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /components/
+Disallow: /images/
+Disallow: /memcache-stats
+Disallow: /profile/
+Disallow: /tiles?
+Disallow: /users/login/
+Disallow: /users/login?
+Disallow: /users/logout/
+Disallow: /users/logout?
+Allow: /
+
+Sitemap: http://www.davsk.net/sitemap.xml

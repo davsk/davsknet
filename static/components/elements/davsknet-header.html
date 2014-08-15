@@ -1,0 +1,132 @@
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../core-toolbar/core-toolbar.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
+<link rel="import" href="./david-address.html">
+
+<polymer-element name="davsknet-header" attributes="heading subheading" noscript>
+<template>
+	<style>
+		/*
+		Please Use standard color scheme http://www.google.com/design/spec/style/color.html#color-ui-color-application
+
+		DavskNet Colors
+		-------------------
+		Toolbar	Light Green	500		#8bc34a	black text	
+		Status	Light Green	700		#689f38	black text
+		Button	Indigo	 	600		#3949ab white text	
+		Focus	Indigo		800		#283593
+		Ripple	Indigo		900		#1a237e
+		Accent	Amber		A100	#ffe57f black text
+
+		*/
+		header { 
+			margin:0; 
+			padding:0; 
+			background-color: #8bc34a; 
+			position:relative; 
+			/*height:200px; */
+			width:100%;
+			overflow:auto;
+			border-bottom: 2px solid #689f38;
+		}
+
+		#wrapper {
+			margin: 0 14em 0 12em;
+			padding: 0 1em;
+			
+		}
+
+		#logo {
+			/*background-color: #ddd;*/
+			float: left;
+			width: 11em;
+			padding: 0 0.5em;
+			margin-left: -100%;
+			position: relative;
+			right: 13em;
+		}
+
+		#logo a {
+			padding-top: 3em
+		}
+
+		.nameplate {
+			font-family: Papyrus, fantasy;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 3em;
+		}
+
+		#masthead {
+			margin-top: 6em;
+		}
+
+		paper-button {
+			margin: 0.5em;
+			width: 10em;
+		}
+
+		paper-button.colored {
+			color: #3949ab;
+			fill: #3949ab;
+		}
+
+		paper-button[raisedButton].colored {
+			background: #3949ab;
+			color: #fff;
+		}
+
+		paper-button[raisedButton].colored #ripple,
+		paper-button[raisedButton].colored::shadow #ripple {
+			color: #1a237e;
+		}
+
+		paper-button[raisedButton].colored #focusBg,
+		paper-button[raisedButton].colored::shadow #focusBg {
+			background: #283593;
+		}
+
+	</style> 
+
+
+	<core-toolbar class="tall" align="center" center>
+		<a href="http://www.davsk.net">
+			<paper-button raisedButton class="colored" label="www.davsk.net" ></paper-button>
+		</a>
+
+		<div flex class="nameplate" justify="center">
+			<h1>{{heading}}</h1>
+			<h2>{{subheading}}</h2>
+		</div>
+
+		<div id ="masthead" class="right">
+			<david-address></david-address>
+		</div>
+		<div class="bottom">1 2 3 4 5 6 7 8 9 -</div>
+	</core-toolbar>
+
+    
+  
+  
+	<!-- <header>
+		<div id="wrapper">
+
+			<div id="nameplate">
+				<h1>{{heading}}</h1>
+				<h2>{{subheading}}</h2>
+			</div>
+
+			<div id ="masthead">
+				<david-address></david-address>
+			</div>	
+
+			<div id="logo">
+				<a href="http://www.davsk.net"><paper-button raisedButton class="colored" label="www.davsk.net" ></paper-button></a>
+			</div>
+		</div>
+	</header> -->
+</template>
+
+</polymer-element>

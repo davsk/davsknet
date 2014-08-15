@@ -1,0 +1,73 @@
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../core-toolbar/core-toolbar.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
+
+<polymer-element name="davsknet-footer" noscript>
+<template>
+	<style>
+		/*
+		Please Use standard color scheme http://www.google.com/design/spec/style/color.html#color-ui-color-application
+
+		DavskNet Colors
+		-------------------
+		Toolbar	Light Green	500		#8bc34a	black text	
+		Status	Light Green	700		#689f38	black text
+		Button	Indigo	 	600		#3949ab white text	
+		Focus	Indigo		800		#283593
+		Ripple	Indigo		900		#1a237e
+		Accent	Amber		A100	#ffe57f black text
+
+		*/
+
+		core-toolbar {
+			color: #689f38;
+			fill: #689f38;
+		}
+
+		paper-button {
+			margin: 0.5em;
+			width: 20em;
+		}
+
+		paper-button.colored {
+			color: #3949ab;
+			fill: #3949ab;
+		}
+
+		paper-button[raisedButton].colored {
+			background: #3949ab;
+			color: #fff;
+		}
+
+		paper-button[raisedButton].colored #ripple,
+		paper-button[raisedButton].colored::shadow #ripple {
+			color: #1a237e;
+		}
+
+		paper-button[raisedButton].colored #focusBg,
+		paper-button[raisedButton].colored::shadow #focusBg {
+			background: #283593;
+		}
+
+	</style> 
+
+
+	<core-toolbar align="center" >
+		<a href="http://www.davsk.net/privacypolicy.html">
+			<paper-button raisedButton class="colored" label="Privacy Policy" ></paper-button>
+		</a>
+
+		<div flex>
+		<a href="http://www.davsk.net/termsofservice.html">
+			<paper-button raisedButton class="colored" label="Terms of Service" ></paper-button>
+		</a>
+		</div>
+
+		<a href="http://www.davsk.net/disclaimer.html">
+			<paper-button raisedButton class="colored" label="Disclaimer" ></paper-button>
+		</a>
+		<div class="bottom center"><p id="copyright">&copy; 2014 DavskNet Authors.</div>
+	</core-toolbar>
+</template>
+
+</polymer-element>

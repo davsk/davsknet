@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>{{.Title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content={{.Description}}>
+  <meta name="author" content={{.Author}}>
+  <script src="/components/platform/platform.js"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif" >
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="import" href="/components/polymer/polymer.html">
+  <link rel="import" href="/components/elements/davsknet-header.html">
+  <link rel="import" href="/components/elements/davsknet-footer.html">
+  <link rel="import" href="../core-scroll-header-panel/core-scroll-header-panel.html">
+
+  <style shim-shadowdom>
+   html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      color: #333;
+    }
+
+    core-scroll-header-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* background for toolbar when it is at its full size */
+    core-scroll-header-panel::shadow #headerBg {
+      /*background-image: url(demos/images/bg9.jpg);*/
+    background-color: #8bc34a;
+    }
+
+    /* background for toolbar when it is condensed */
+    core-scroll-header-panel::shadow #condensedHeaderBg {
+      background-color: #8bc34a;
+    }
+
+    core-toolbar {
+      color: #689f38;
+      fill: #689f38;
+      background-color: transparent;
+    }
+    
+    .title {
+      -webkit-transform-origin: 0;
+      transform-origin: 0;
+      font-size: 40px;
+    }
+
+    .content {
+      padding: 10px 30px;
+    }
+
+
+  /*  body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+      padding: 24px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;:width;
+    }
+
+    
+ */ </style>
+</head>
+
+<body>
+  <core-scroll-header-panel condenses>
+  <davsknet-header heading="DavskNet Home Page" subheading="David Skinner Family Site"></davsknet-header>
+  </core-scroll-header-panel>
+  <div flex class="content">
+      
+      {{.Content}}
+      </div>
+    <davsknet-footer>42</davsknet-footer>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>{{.Title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content={{.Description}}>
+  <meta name="author" content={{.Author}}>
+  <script src="/components/platform/platform.js"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif" >
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="import" href="/components/polymer/polymer.html">
+  <link rel="import" href="/components/elements/davsknet-header.html">
+  <link rel="import" href="/components/elements/davsknet-footer.html">
+  <link rel="import" href="../core-scroll-header-panel/core-scroll-header-panel.html">
+
+  <style shim-shadowdom>
+   html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      color: #333;
+    }
+
+    core-scroll-header-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* background for toolbar when it is at its full size */
+    core-scroll-header-panel::shadow #headerBg {
+      /*background-image: url(demos/images/bg9.jpg);*/
+    background-color: #8bc34a;
+    }
+
+    /* background for toolbar when it is condensed */
+    core-scroll-header-panel::shadow #condensedHeaderBg {
+      background-color: #8bc34a;
+    }
+
+    core-toolbar {
+      color: #689f38;
+      fill: #689f38;
+      background-color: transparent;
+    }
+    
+    .title {
+      -webkit-transform-origin: 0;
+      transform-origin: 0;
+      font-size: 40px;
+    }
+
+    .content {
+      padding: 10px 30px;
+    }
+
+
+  /*  body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+      padding: 24px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;:width;
+    }
+
+    
+ */ </style>
+</head>
+
+<body>
+  <core-scroll-header-panel condenses>
+  <davsknet-header heading="DavskNet Home Page" subheading="David Skinner Family Site"></davsknet-header>
+  </core-scroll-header-panel>
+  <div flex class="content">
+      
+      {{.Content}}
+      <p class="c2 c3 title"><a name="h.1wl656o87ob1"></a><span>DavskNet Web Page Design</span></p><p class="c2"><span>Standards and Resources for Designing Web Pages for DavskNet</span></p><h1 class="c2 c3"><a name="h.ltanu7m6gmu9"></a><span>Standards</span></h1><p class="c2"><span>Technical </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNG1RXpAFW3xszvH7wxFFNJ58J4xeQ">http://www.w3.org/</a></span></p><p class="c2"><span>Graphic </span><span class="c0"><a class="c1" href="http://www.google.com/design/spec/">http://www.google.com/design/spec/</a></span></p><h1 class="c2 c3"><a name="h.a675kla3hvfa"></a><span>Hardware </span></h1><p class="c2"><span>About Appengine </span><span class="c0"><a class="c1" href="https://cloud.google.com/products/app-engine/">https://cloud.google.com/products/app-engine/</a></span></p><p class="c2"><span>For Developers </span><span class="c0"><a class="c1" href="https://developers.google.com/appengine/">https://developers.google.com/appengine/</a></span></p><p class="c2"><span>My Applications </span><span class="c0"><a class="c1" href="https://appengine.google.com/">https://appengine.google.com/</a></span></p><h1 class="c2 c3"><a name="h.kr99y5blhku1"></a><span>Software</span></h1><p class="c2"><span>The GO Programming Language </span><span class="c0"><a class="c1" href="http://golang.org/">http://golang.org/</a></span></p><p class="c2"><span>Search for GO Packages </span><span class="c0"><a class="c1" href="https://godoc.org/">https://godoc.org/</a></span></p><p class="c2"><span>Version Control System </span><span class="c0"><a class="c1" href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHReqsuKT6C86HcgL4TbSevF24rxQ">https://github.com/</a></span></p><h1 class="c2 c3"><a name="h.yc5ii3ws1v4u"></a><span>Tools</span></h1><p class="c2"><span>Text Editor </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.sublimetext.com%2F3&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNG3PZlBI7HruF3auqyQ3oBPf9mNwg">http://www.sublimetext.com/3</a></span></p><p class="c2"><span>HTML Editor </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.online-html-editor.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFC6rkGTV4t4sPZma18LOVrwUDlvA">http://www.online-html-editor.org/</a></span></p><p class="c2"><span>Polymer Designer </span><span class="c0"><a class="c1" href="http://www.polymer-project.org/tools/designer/">http://www.polymer-project.org/tools/designer/</a></span></p><h2 class="c2 c3"><a name="h.mwk6l39ymiyz"></a><span>Polymer</span></h2><p class="c2"><span>Get it </span><span class="c0"><a class="c1" href="http://www.polymer-project.org/">http://www.polymer-project.org/</a></span></p><h3 class="c2 c3"><a name="h.pq8xtucp7h0e"></a><span>Demos</span></h3><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fdavsk.net%2Fcomponents%2Fcore-component-page%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGLqWj3FlK1ULJdmqac9UX9Y8se1A">http://davsk.net/components/core-component-page/index.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fdavsk.net%2Fcomponents%2Fpaper-elements%2Fdemo.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGjIbm1hZdekvxkbTln8vsyTEIY5w">http://davsk.net/components/paper-elements/demo.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fdavsk.net%2Fcomponents%2Fweb-animations-js%2Ftutorial%2Fsample-tutorial.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGfCfYPlsGGCEN4HOLH8OarF-9pVQ">http://davsk.net/components/web-animations-js/tutorial/sample-tutorial.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fdavsk.net%2Fcomponents%2Fsampler-scaffold%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFKmXBcN2hX1vxb2vgiTZfuwSqE7w">http://davsk.net/components/sampler-scaffold/index.html</a></span></p><h2 class="c2 c3"><a name="h.12dxpo929n1n"></a><span>Bootstrap</span></h2><p class="c2"><span>About </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fdavsk.net%2Fcomponents%2Fpaper-elements%2Fdemo.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGjIbm1hZdekvxkbTln8vsyTEIY5w">http://davsk.net/components/paper-elements/demo.html</a></span></p><p class="c2"><span>Get It </span><span class="c0"><a class="c1" href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FPolymerLabs%2FBootstrap&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHa4tcdJdq0gDsOUSo4gamHU8rMTg">https://github.com/PolymerLabs/Bootstrap</a></span></p><h3 class="c2 c3"><a name="h.iyvxhg29rjzo"></a><span>Samples</span></h3><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Faccordion.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHV4Vo9D0GSFG5FsmCfscJLQdEW5g">http://www.davsk.net/components/Bootstrap/samples/accordion.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Faccordion1.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHS2lnVYi1K0UTWK6cG2DLNsKj96w">http://www.davsk.net/components/Bootstrap/samples/accordion1.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Fsample1.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFoDC0ZxpTWxN-rKRHBIrUVKzTe6Q">http://www.davsk.net/components/Bootstrap/samples/sample1.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Fsample2.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGEhdKmjHuLJkFU0_-30tULVjGTZQ">http://www.davsk.net/components/Bootstrap/samples/sample2.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Fsample3.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHvgVVRnUvwrSFsAW_uM3-dJg6ksg">http://www.davsk.net/components/Bootstrap/samples/sample3.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Fsample4.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNF8l3XahNkzWnrJ_9SK32Vf9XATgQ">http://www.davsk.net/components/Bootstrap/samples/sample4.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.davsk.net%2Fcomponents%2FBootstrap%2Fsamples%2Fsample-simple.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNGWwHxC4ia9krB40H79X3lGLbzt7A">http://www.davsk.net/components/Bootstrap/samples/sample-simple.html</a></span></p><h1 class="c2 c3"><a name="h.3yns2n8snldb"></a><span>References</span></h1><p class="c2"><span>CSS </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fwww.cssportal.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEVy28B7Pv_x-YPBDD5HaqnkfV6ug">http://www.cssportal.com/</a></span></p><p class="c2"><span>Fonts </span><span class="c0"><a class="c1" href="http://www.google.com/url?q=http%3A%2F%2Fcssfontstack.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNExuLMK7XhwStBkBjL3WL9on6Lwlw">http://cssfontstack.com/</a></span></p><p class="c2 c4"><span></span></p><h1 class="c2 c3"><a name="h.hba3a4h0hwyu"></a><span>Legal</span></h1><p class="c2"><span class="c0"><a class="c1" href="http://www.davsk.net/disclaimer.html">http://www.davsk.net/disclaimer.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.davsk.net/privacypolicy.html">http://www.davsk.net/privacypolicy.html</a></span></p><p class="c2"><span class="c0"><a class="c1" href="http://www.davsk.net/termsofservice.html">http://www.davsk.net/termsofservice.html</a></span></p><p class="c2 c4"><span></span></p>
+      <address><a href="https://plus.google.com/+DavidSkinnerDavsk?rel=author">David Skinner</a><address>
+      </div>
+    <davsknet-footer>42</davsknet-footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<polymer-element name="david-address" noscript>
+<template>
+	<style>
+		address {
+			font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+			width: 17em;
+			padding: 0 0.5em;
+			background-color: #ffe57f;
+			text-align: left;
+		}
+	</style>
+
+	<div>
+		<address>
+			<div itemscope itemtype="http://schema.org/Person" vertical layout>
+				<span itemprop="name">David Skinner</span>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="streetAddress">
+						670 S6th St Ste 16
+					</span><br/>
+					<span itemprop="addressLocality">Arkadelphia</span>,
+					<span itemprop="addressRegion">AR</span>
+					<span itemprop="postalCode">71923-6242</span>
+				</div>
+				<br/><span itemprop="telephone">1-501-201-0414 d</span><br/>
+				<a href="mailto:david@davsk.net" itemprop="email">david@davsk.net</a>
+			</div>
+		</address>
+	</div>
+</template>
+</polymer-element>
