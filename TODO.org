@@ -1,0 +1,42 @@
+* Reference
+http://orgmode.org/org.html
+
+* EMACS Short Cuts
+C-c p p :: open a project file in a fresh emacs session, ussually a TODO.org file. From there, i just use dolphin to open files and the buffer menu to switch buffers. If you try to open a file in dolphin that's already an active buffer, then the buffer just comes forward, so it works fine for that too.
+
+C-x 3 :: vertical split to view buffers side by side on my large monitor at work
+
+C-x 2 :: horizontal split, i actually never use this but listing for reference
+
+C-x 1 :: close any buffer splits
+
+C-x s :: save a file
+
+C-x c :: close emacs
+
+C-c p W :: this starts the rewrite rule for gofmt
+
+M-w :: copy
+
+C-w :: cut
+
+C-y :: paste
+
+C-z :: undo
+
+C-s :: search, repeated presses search forward
+
+C-g :: standard abort. I find myself pressing this a lot for autocomplete i didn't want. I would like to tone down the aggresiveness of autocomplete but it's not a big deal.
+
+* Github
+
+* Davsk Layout Links
+http://www.davsk.net/components/Bootstrap/samples/accordion.html
+http://www.polymer-project.org/tools/designer/
+http://www.polymer-project.org/docs/polymer/layout-attrs.html
+http://www.polymer-project.org/docs/elements/core-elements.html#core-menu
+http://davsk.net/components/core-component-page/index.html#core-selector
+git@github.com:go-azul3d/procedural.git
+http://golang.org/doc/articles/wiki/
+https://github.com/astaxie/build-web-application-with-golang/blob/master/en/eBook/02.2.md
+http://www.maths.uq.edu.au/~kroese/ps/MCSpatial.pdf
